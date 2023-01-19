@@ -2,21 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: api
-  name: api
+    app: db
+  name: db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api
+      app: db
   template:
     metadata:
       labels:
-        app: api
+        app: db
     spec:
       containers:
-        - image: riyazuddin12345/urlapi:v2
-          name: api
+        - image: {{ .Values.dbimage }}
+          name: db
           ports:
-            - containerPort: 3000
-          
+            - containerPort: 6379
