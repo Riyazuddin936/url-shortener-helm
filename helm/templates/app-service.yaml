@@ -9,7 +9,6 @@ spec:
     - name: api
       port: 3000
       targetPort: 3000
-      nodePort: 30070
   selector:
     app: api
-  type: NodePort
+  type: LoadBalancer
