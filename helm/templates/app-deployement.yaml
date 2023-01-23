@@ -15,7 +15,7 @@ spec:
         app: api
     spec:
       containers:
-        - image:  riyazuddin12345/urldb:v1
+        - image:  {{ .Values.appimage }}
           name: api
           ports:
             - containerPort: 3000
