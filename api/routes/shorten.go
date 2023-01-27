@@ -76,7 +76,7 @@ func ShortenURL(c *fiber.Ctx) error {
 
 	resp := response{
 		URL:             body.URL,
-		Short:           "localhost:4030/" + id,
+		Short:           "localhost:4050/" + id,
 		Expiry:          body.Expiry,
 		XRateRemaining:  10,
 		XRateLimitReset: 30,
